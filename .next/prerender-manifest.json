@@ -30,7 +30,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/premiacoes": {
+    "/contato": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -43,56 +43,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/premiacoes",
-      "dataRoute": "/premiacoes.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/sobre": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/sobre",
-      "dataRoute": "/sobre.rsc",
+      "srcRoute": "/contato",
+      "dataRoute": "/contato.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,7 +78,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/contato": {
+    "/sobre": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,8 +91,56 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/contato",
-      "dataRoute": "/contato.rsc",
+      "srcRoute": "/sobre",
+      "dataRoute": "/sobre.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/premiacoes": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/premiacoes",
+      "dataRoute": "/premiacoes.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "230ef6e8a07fcb24edc6d47c87763e68",
-    "previewModeSigningKey": "6b0dd2b3cdc347c114ec526ae322569507b331388cc46b00b0ba67e1a054bc0d",
-    "previewModeEncryptionKey": "2491b82735c72aa8fd65c3200d51098e0d50d3e5626847daca78b4ef8e8c2eec"
+    "previewModeId": "5ea24f9b3fc044d1b6f59b1288a276ae",
+    "previewModeSigningKey": "9e7a1bd5d72a71f429fca84572962bcfda2bad2f653ee3d3448fc98c2564c4ee",
+    "previewModeEncryptionKey": "9972388772d22d60a05b5546cd806cf40577c2d3cf77c14a0120441afe163820"
   }
 }
