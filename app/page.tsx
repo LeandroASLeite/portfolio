@@ -3,6 +3,8 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
+  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+
   return (
     <div className="container mx-auto px-4 py-12 md:py-24">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
@@ -26,7 +28,7 @@ export default function Home() {
         <div className="flex justify-center">
           <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-primary">
             <Image
-              src="/Minha-foto.webp"
+              src={`${prefix}/Minha-foto.webp`}
               alt="Leandro Leite"
               fill
               className="object-cover"

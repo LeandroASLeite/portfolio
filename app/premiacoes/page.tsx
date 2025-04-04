@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Trophy, Calendar, Award, Medal } from "lucide-react"
 
 export default function PremiacoesPage() {
+  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
   const premiacoes = [
     {
       id: 1,
@@ -80,7 +81,8 @@ export default function PremiacoesPage() {
               <div className="w-full md:w-1/2">
                 <div className="relative h-64 w-full overflow-hidden rounded-xl border">
                   <Image
-                    src={premiacao.imagem || "/placeholder.svg"}
+                    // src={premiacao.imagem || "/placeholder.svg"}
+                    src={`${prefix}${premiacao.imagem}`}
                     alt={premiacao.titulo}
                     fill
                     // className="object-cover transition-transform hover:scale-105 "

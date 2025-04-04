@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 export default function SobrePage() {
+  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8">Sobre Mim</h1>
@@ -8,7 +9,7 @@ export default function SobrePage() {
         <div className="md:col-span-1">
           <div className="sticky top-20">
             <div className="relative w-full aspect-square overflow-hidden rounded-lg mb-4">
-              <Image src="/Minha-foto.webp" alt="Leandro Leite" fill className="object-cover" />
+              <Image src={`${prefix}/Minha-foto.webp`} alt="Leandro Leite" fill className="object-cover" />
             </div>
             <div className="space-y-2">
               <h2 className="text-xl font-semibold">Leandro Leite</h2>

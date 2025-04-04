@@ -1,31 +1,42 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
 export default function ProjetosPage() {
-  const projetos = [
+  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
 
+  const projetos = [
     {
       id: 1,
       titulo: "Book Auctions",
-      descricao:"ste projeto é uma plataforma inovadora para leilão de livros, projetada para conectar leitores e colecionadores em um ambiente interativo e eficiente. A aplicação permite que usuários criem leilões personalizados, acompanhem lances em tempo real e gerenciem transações de maneira prática e segura.",
+      descricao:
+        "Este projeto é uma plataforma inovadora para leilão de livros, projetada para conectar leitores e colecionadores em um ambiente interativo e eficiente. A aplicação permite que usuários criem leilões personalizados, acompanhem lances em tempo real e gerenciem transações de maneira prática e segura.",
       imagem: "/BookAuctions.webp",
       tecnologias: ["NextJS", "NestJS", "Postgress", "Docker"],
     },
     {
       id: 2,
       titulo: "Eventify",
-      descricao: "Eventify é uma plataforma de gestão de eventos colaborativos desenvolvida para facilitar a organização e a divisão de despesas em grupo. Seu objetivo principal é promover maior transparência nos custos e simplificar a coordenação entre os participantes, centralizando as informações do evento, auxiliando na tomada de decisões coletivas e reduzindo potenciais conflitos financeiros através de uma comunicação mais clara sobre os gastos.",
+      descricao:
+        "Eventify é uma plataforma de gestão de eventos colaborativos desenvolvida para facilitar a organização e a divisão de despesas em grupo. Seu objetivo principal é promover maior transparência nos custos e simplificar a coordenação entre os participantes...",
       imagem: "/Eventify.webp",
-      tecnologias: ["Angular", "CSS", "Java Springboot","GCP"],
+      tecnologias: ["Angular", "CSS", "Java Springboot", "GCP"],
     },
     {
       id: 3,
       titulo: "ASTRO",
-      descricao: "Astro é um jogo de aprendizado matemático. Os usuários praticam e competem entre si e através de um sistema de ranking. Os exercícios incluem desde operações matemáticas básicas como soma e subtração até equações e geometria básica.",
+      descricao:
+        "Astro é um jogo de aprendizado matemático. Os usuários praticam e competem entre si e através de um sistema de ranking...",
       imagem: "/Astro.webp",
-      tecnologias: ["Python", "PyGame", "Pandas"], 
+      tecnologias: ["Python", "PyGame", "Pandas"],
     },
   ]
 
@@ -42,7 +53,12 @@ export default function ProjetosPage() {
         {projetos.map((projeto) => (
           <Card key={projeto.id} className="overflow-hidden">
             <div className="relative h-48 w-full">
-              <Image src={projeto.imagem || "/placeholder.svg"} alt={projeto.titulo} fill className="object-cover" />
+              <Image
+                src={`${prefix}${projeto.imagem || "/placeholder.svg"}`}
+                alt={projeto.titulo}
+                fill
+                className="object-cover"
+              />
             </div>
             <CardHeader>
               <CardTitle>{projeto.titulo}</CardTitle>
@@ -57,13 +73,10 @@ export default function ProjetosPage() {
                 ))}
               </div>
             </CardContent>
-            <CardFooter>
-             
-            </CardFooter>
+            <CardFooter></CardFooter>
           </Card>
         ))}
       </div>
     </div>
   )
 }
-
