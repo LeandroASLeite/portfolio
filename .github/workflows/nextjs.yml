@@ -21,14 +21,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Setup Node with pnpm cache
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: 'pnpm'
-
-      - name: Install pnpm
-        run: npm install -g pnpm
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -48,6 +48,9 @@ jobs:
 
       - name: Build with Next.js
         run: pnpm next build
+
+      - name: Export static site
+        run: pnpm next export
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
