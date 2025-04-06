@@ -30,30 +30,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/sobre": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/sobre",
-      "dataRoute": "/sobre.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/contato": {
       "experimentalBypassFor": [
         {
@@ -78,7 +54,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/premiacoes": {
+    "/": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -91,8 +67,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/premiacoes",
-      "dataRoute": "/premiacoes.rsc",
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,7 +102,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/": {
+    "/sobre": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,8 +115,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
+      "srcRoute": "/sobre",
+      "dataRoute": "/sobre.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/premiacoes": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/premiacoes",
+      "dataRoute": "/premiacoes.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "56555bc0849b4faa24530c6a389f4c13",
-    "previewModeSigningKey": "7deb9cc9286d3ec0f51ee468626a02a5458800798807d1b36d3f5f4079d2f0f7",
-    "previewModeEncryptionKey": "83fff2672851d4959b99493c2625edc9836c9fd3f1a2ee76b5e067098639d34e"
+    "previewModeId": "df9b09d1286d9b64dae089dd87658b29",
+    "previewModeSigningKey": "213c9e022c7053922b70d55ca79c970cb5403dcc02aeb60ff1bab772d98f4434",
+    "previewModeEncryptionKey": "b35f63d5b19f57c62e92fe60dfd645af762f1c20151d15ba006e8e0d83fb4f6f"
   }
 }

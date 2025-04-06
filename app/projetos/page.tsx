@@ -41,7 +41,7 @@ export default function ProjetosPage() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-4">Meus Projetos</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">

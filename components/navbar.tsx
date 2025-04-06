@@ -10,14 +10,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="border-b">
+<header className="fixed top-0 left-0 w-full z-50 border-b bg-white dark:bg-background transition-colors duration-300">
+
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Nome / Logo */}
+        
         <Link href="/" className="font-bold text-xl">
           Leandro Leite
         </Link>
 
-        {/* Ícone do menu hambúrguer (visível apenas no mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-800 dark:text-white"
@@ -26,7 +26,7 @@ export default function Navbar() {
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
 
-        {/* Navegação padrão para telas maiores */}
+
         <nav className="hidden md:flex gap-6 items-center">
           <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
             Início
@@ -45,7 +45,6 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Toggle de tema e botão de contato */}
         <div className="hidden md:flex items-center gap-4">
           <ModeToggle />
           <Button asChild>
@@ -54,7 +53,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu dropdown para mobile */}
       {isOpen && (
         <nav className="md:hidden absolute top-16 left-0 w-full bg-white dark:bg-gray-900 border-b">
           <ul className="flex flex-col space-y-4 p-4">

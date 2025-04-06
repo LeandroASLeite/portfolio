@@ -60,11 +60,11 @@ export default function PremiacoesPage() {
   ]
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
       <div className="mb-12 text-center">
         <h1 className="text-3xl font-bold mb-4">Premiações e Destaques</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Reconhecimentos e prêmios recebidos por projetos desenvolvidos ao longo da minha carreira.
+          Reconhecimentos e prêmios recebidos por projetos desenvolvidos ao longo da minha jornada acadêmica.
         </p>
       </div>
 

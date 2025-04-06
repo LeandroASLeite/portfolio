@@ -3,13 +3,13 @@ import Image from "next/image"
 export default function SobrePage() {
   const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
       <h1 className="text-3xl font-bold mb-8">Sobre Mim</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="md:col-span-1">
           <div className="sticky top-20">
             <div className="relative w-full aspect-square overflow-hidden rounded-lg mb-4">
-              <Image src={`${prefix}/Minha-foto.webp`} alt="Leandro Leite" fill className="object-cover" />
+              <Image src={`${prefix}/Me_sobre.webp`} alt="Leandro Leite" fill className="object-cover object-top" />
             </div>
             <div className="space-y-2">
               <h2 className="text-xl font-semibold">Leandro Leite</h2>
@@ -82,7 +82,7 @@ export default function SobrePage() {
             </div>
           </section>
 
-          <section>
+          {/* <section>
             <h2 className="text-2xl font-semibold mb-4">Formação</h2>
             <div className="space-y-4">
               <div className="border-l-4 border-primary pl-4">
@@ -94,8 +94,24 @@ export default function SobrePage() {
                 <p className="text-muted-foreground">Escola Técnica - Concluído</p>
               </div>
             </div>
-          </section>
-          
+          </section> */}
+          <section>
+  <h2 className="text-2xl font-semibold mb-4">Formação</h2>
+  <div className="space-y-4">
+    
+    <div className="border-l-4 border-primary pl-4">
+    <h3 className="font-medium">Bacharelado em Sistemas de Informação <span className="text-sm text-muted-foreground">(2022-2025)</span></h3>
+
+      {/* <h3 className="font-medium">Bacharelado em Sistemas de Informação</h3> */}
+      <p className="text-muted-foreground">FAI-MG (Centro de Ensino Superior em Gestão, Tecnologia e Educação) — Em andamento</p>
+    </div>
+    <div className="border-l-4 border-primary pl-4">
+    <h3 className="font-medium">Técnico em Eletrônica <span className="text-sm text-muted-foreground">(2015–2017)</span></h3>
+  {/* <h3 className="font-medium">Técnico em Eletrônica</h3> */}
+      <p className="text-muted-foreground">ETE FMC (Escola Técnica de Eletrônica Francisco Moreira da Costa) — Concluído juntamente com o Ensino Médio</p>
+    </div>
+  </div>
+</section>
         </div>
       </div>
     </div>
