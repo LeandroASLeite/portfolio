@@ -1,9 +1,9 @@
 {
-  "/favicon.ico/route": "/favicon.ico",
   "/_not-found/page": "/_not-found",
-  "/page": "/",
-  "/sobre/page": "/sobre",
+  "/favicon.ico/route": "/favicon.ico",
   "/contato/page": "/contato",
+  "/page": "/",
   "/premiacoes/page": "/premiacoes",
-  "/projetos/page": "/projetos"
+  "/projetos/page": "/projetos",
+  "/sobre/page": "/sobre"
 }

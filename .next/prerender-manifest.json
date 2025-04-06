@@ -54,30 +54,6 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
     "/projetos": {
       "experimentalBypassFor": [
         {
@@ -126,6 +102,30 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/premiacoes": {
       "experimentalBypassFor": [
         {
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "df9b09d1286d9b64dae089dd87658b29",
-    "previewModeSigningKey": "213c9e022c7053922b70d55ca79c970cb5403dcc02aeb60ff1bab772d98f4434",
-    "previewModeEncryptionKey": "b35f63d5b19f57c62e92fe60dfd645af762f1c20151d15ba006e8e0d83fb4f6f"
+    "previewModeId": "8d4a07baa57b461a39079b9c5de8e055",
+    "previewModeSigningKey": "bcd51812e84d63839d08b0a91de3d065f140b73bb8466bcfcb5887413f53bef3",
+    "previewModeEncryptionKey": "f1a04a3a18256ef18502e4a94adbc2a0a464a4d0d2b64defc49fba900d2267ce"
   }
 }
