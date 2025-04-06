@@ -30,7 +30,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/premiacoes": {
+    "/sobre": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -43,8 +43,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/premiacoes",
-      "dataRoute": "/premiacoes.rsc",
+      "srcRoute": "/sobre",
+      "dataRoute": "/sobre.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -78,7 +78,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/": {
+    "/premiacoes": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -91,8 +91,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/",
-      "dataRoute": "/index.rsc",
+      "srcRoute": "/premiacoes",
+      "dataRoute": "/premiacoes.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -126,7 +126,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/sobre": {
+    "/": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -139,8 +139,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/sobre",
-      "dataRoute": "/sobre.rsc",
+      "srcRoute": "/",
+      "dataRoute": "/index.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -154,8 +154,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "16d01d0bfcecf354734402004e19d297",
-    "previewModeSigningKey": "716e003008d6c97bebf4c7849b592f6db7abba98f818717d3364d39ffb8cca85",
-    "previewModeEncryptionKey": "1b0b290fb77e4a814abc47166ab77e83938f408e1c0083f3154da07a185c47a6"
+    "previewModeId": "56555bc0849b4faa24530c6a389f4c13",
+    "previewModeSigningKey": "7deb9cc9286d3ec0f51ee468626a02a5458800798807d1b36d3f5f4079d2f0f7",
+    "previewModeEncryptionKey": "83fff2672851d4959b99493c2625edc9836c9fd3f1a2ee76b5e067098639d34e"
   }
 }
