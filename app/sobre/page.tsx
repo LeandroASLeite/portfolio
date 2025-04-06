@@ -76,7 +76,7 @@ export default function SobrePage() {
                 <ul className="list-disc list-inside text-muted-foreground space-y-1">
                   <li>Scrum</li>
                   <li>Kanban</li>
-                  
+
                 </ul>
               </div>
             </div>
@@ -96,22 +96,39 @@ export default function SobrePage() {
             </div>
           </section> */}
           <section>
-  <h2 className="text-2xl font-semibold mb-4">Formação</h2>
-  <div className="space-y-4">
-    
-    <div className="border-l-4 border-primary pl-4">
-    <h3 className="font-medium">Bacharelado em Sistemas de Informação <span className="text-sm text-muted-foreground">(2022-2025)</span></h3>
+            <h2 className="text-2xl font-semibold mb-4">Formação</h2>
+            <div className="space-y-4">
 
-      {/* <h3 className="font-medium">Bacharelado em Sistemas de Informação</h3> */}
-      <p className="text-muted-foreground">FAI-MG (Centro de Ensino Superior em Gestão, Tecnologia e Educação) — Em andamento</p>
-    </div>
-    <div className="border-l-4 border-primary pl-4">
-    <h3 className="font-medium">Técnico em Eletrônica <span className="text-sm text-muted-foreground">(2015–2017)</span></h3>
-  {/* <h3 className="font-medium">Técnico em Eletrônica</h3> */}
-      <p className="text-muted-foreground">ETE FMC (Escola Técnica de Eletrônica Francisco Moreira da Costa) — Concluído juntamente com o Ensino Médio</p>
-    </div>
-  </div>
-</section>
+              <div className="border-l-4 border-primary pl-4">
+                <h3 className="font-medium">Bacharelado em Sistemas de Informação <span className="text-sm text-muted-foreground">(2022-2025)</span></h3>
+
+                {/* <h3 className="font-medium">Bacharelado em Sistemas de Informação</h3> */}
+                <p className="text-muted-foreground">FAI-MG (Centro de Ensino Superior em Gestão, Tecnologia e Educação) — Em andamento</p>
+              </div>
+              <div className="border-l-4 border-primary pl-4">
+                <h3 className="font-medium">Técnico em Eletrônica <span className="text-sm text-muted-foreground">(2015–2017)</span></h3>
+                {/* <h3 className="font-medium">Técnico em Eletrônica</h3> */}
+                <p className="text-muted-foreground">ETE FMC (Escola Técnica de Eletrônica Francisco Moreira da Costa) — Concluído juntamente com o Ensino Médio</p>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2 className="text-2xl font-semibold mb-4">Experiência Profissional</h2>
+            <div className="space-y-4">
+              <div className="border-l-4 border-primary pl-4">
+                <h3 className="font-medium">Estagiário em Desenvolvimento de Software <span className="text-sm text-muted-foreground">(Fev. 2024 – Presente)</span></h3>
+                <p className="text-muted-foreground">Lightera – Santa Rita do Sapucaí, MG</p>
+              </div>
+              <div className="border-l-4 border-primary pl-4">
+                <h3 className="font-medium">Técnico em Eletrônica <span className="text-sm text-muted-foreground">(Nov. 2021 – Presente)</span></h3>
+                <p className="text-muted-foreground">Lightera – Santa Rita do Sapucaí, MG</p>
+              </div>
+              <div className="border-l-4 border-primary pl-4">
+                <h3 className="font-medium">Técnico em Eletrônica <span className="text-sm text-muted-foreground">(Mai. 2021 – Nov. 2021)</span></h3>
+                <p className="text-muted-foreground">MBM – Santa Rita do Sapucaí, MG</p>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>
