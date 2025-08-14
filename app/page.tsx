@@ -1,19 +1,25 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
-  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+  const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
   return (
-    
     <div className="container mx-auto px-4 py-12 md:py-24 pt-16 md:pt-16">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-center">
         <div className="space-y-6">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Sou Leandro Leite - Técnico em Eletrônica e Desenvolvedor em Formação.
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">
+            Sou Leandro Leite — Desenvolvedor Back-End em Formação e Apaixonado
+            por Tecnologia.
           </h1>
-          <p className="text-lg text-muted-foreground">Sou técnico em eletrônica, estudante de Sistemas de Informação e apaixonado por tecnologia. Tenho desenvolvido alguns projetos, incluindo alguns reconhecidos em premiações, e estou sempre em busca de aprender mais e criar soluções tecnológicas que façam a diferença.</p>
+          <p className="text-lg text-muted-foreground">
+            Sou estudante de Sistemas de Informação e atualmente atuo como
+            estagiário de back-end. Apaixonado por tecnologia, venho
+            desenvolvendo projetos que já foram reconhecidos em premiações.
+            Estou sempre em busca de novos aprendizados e de criar soluções que
+            realmente façam a diferença.
+          </p>
           <div className="flex flex-wrap gap-4">
             <Button variant="default" asChild>
               <Link href="/projetos">Meus Projetos</Link>
@@ -39,6 +45,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
