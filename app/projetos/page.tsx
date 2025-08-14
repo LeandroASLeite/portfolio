@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -9,9 +11,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { motion } from "framer-motion"
 
 export default function ProjetosPage() {
-  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
 
   const projetos = [
     {
@@ -42,39 +45,57 @@ export default function ProjetosPage() {
 
   return (
     <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
-      <div className="mb-8 text-center">
+      <motion.div
+        className="mb-8 text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1 className="text-3xl font-bold mb-4">Meus Projetos</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Conheça alguns dos projetos que desenvolvi combinando meus conhecimentos em eletrônica e programação.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projetos.map((projeto) => (
-          <Card key={projeto.id} className="overflow-hidden">
-            <div className="relative h-48 w-full">
-              <Image
-                src={`${prefix}${projeto.imagem || "/placeholder.svg"}`}
-                alt={projeto.titulo}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <CardHeader>
-              <CardTitle>{projeto.titulo}</CardTitle>
-              <CardDescription>{projeto.descricao}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-2">
-                {projeto.tecnologias.map((tech) => (
-                  <span key={tech} className="bg-muted text-xs px-2 py-1 rounded-md">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
-            <CardFooter></CardFooter>
-          </Card>
+        {projetos.map((projeto, index) => (
+          <motion.div
+            key={projeto.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <Card className="overflow-hidden">
+              <motion.div
+                className="relative h-48 w-full"
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Image
+                  src={`${prefix}${projeto.imagem || "/placeholder.svg"}`}
+                  alt={projeto.titulo}
+                  fill
+                  className="object-cover"
+                />
+              </motion.div>
+              <CardHeader>
+                <CardTitle>{projeto.titulo}</CardTitle>
+                <CardDescription>{projeto.descricao}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {projeto.tecnologias.map((tech) => (
+                    <span key={tech} className="bg-muted text-xs px-2 py-1 rounded-md">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </CardContent>
+              <CardFooter />
+            </Card>
+          </motion.div>
         ))}
       </div>
     </div>
