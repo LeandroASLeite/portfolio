@@ -1,9 +1,0 @@
-{
-  "/contato/page": "app/contato/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/premiacoes/page": "app/premiacoes/page.js",
-  "/projetos/page": "app/projetos/page.js",
-  "/sobre/page": "app/sobre/page.js",
-  "/teste/page": "app/teste/page.js"
-}
