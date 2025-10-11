@@ -1,48 +1,71 @@
-'use client'
+"use client";
 
-import { useState, useRef } from "react"
-import emailjs from "@emailjs/browser"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 // import { Mail, Phone, MapPin } from "lucide-react"
-import { Linkedin, Github, Mail, Phone, MapPin, MessageSquare } from "lucide-react"
-
-
-
+import {
+  Linkedin,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  MessageSquare,
+} from "lucide-react";
+const next_emailjs_serviceId = "service_agm77xo";
+const next_emailjs_template = "template_qjzbjnb";
+const next_emailjs_publicKey = "o8TsJFVYU6UM2Tr8m";
 export default function ContatoPage() {
-  const form = useRef<HTMLFormElement>(null)
-  const [status, setStatus] = useState("")
+  const form = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState("");
   const redes = [
-  { label: "LinkedIn", href: "...", icon: <Linkedin className="h-5 w-5" /> },
-  { label: "GitHub", href: "...", icon: <Github className="h-5 w-5" /> },
-  { label: "Email", href: "...", icon: <Mail className="h-5 w-5" /> },
-  { label: "WhatsApp", href: "...", icon: <MessageSquare className="h-5 w-5" /> },
-]
-
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/leandro-leite-760931186",
+      icon: <Linkedin className="h-5 w-5" />,
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/LeandroASLeite",
+      icon: <Github className="h-5 w-5" />,
+    },
+    {
+      label: "Email",
+      href: "mailto:leandroleite.ll25@gmail.com",
+      icon: <Mail className="h-5 w-5" />,
+    },
+  ];
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!form.current) return
+    e.preventDefault();
+    if (!form.current) return;
 
     try {
       const response = await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        next_emailjs_serviceId!,
+        next_emailjs_template!,
         form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-      )
-      console.log("E-mail enviado:", response)
-      setStatus("Mensagem enviada com sucesso!")
-      form.current.reset()
+        next_emailjs_publicKey!
+      );
+      console.log("E-mail enviado:", response);
+      setStatus("Mensagem enviada com sucesso!");
+      form.current.reset();
     } catch (error) {
-      console.error("Erro ao enviar e-mail:", error)
-      setStatus("Erro ao enviar a mensagem. Tente novamente.")
+      console.error("Erro ao enviar e-mail:", error);
+      setStatus("Erro ao enviar a mensagem. Tente novamente.");
     }
-  }
+  };
 
   return (
     <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
@@ -54,7 +77,8 @@ export default function ContatoPage() {
       >
         <h1 className="text-3xl font-bold mb-4">Entre em Contato</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Tem alguma pergunta ou proposta de projeto? Entre em contato comigo através do formulário abaixo.
+          Tem alguma pergunta ou proposta de projeto? Entre em contato comigo
+          através do formulário abaixo.
         </p>
       </motion.div>
 
@@ -70,11 +94,17 @@ export default function ContatoPage() {
             <CardHeader>
               <CardTitle>Envie uma mensagem</CardTitle>
               <CardDescription>
-                Preencha o formulário abaixo e entrarei em contato o mais breve possível.
+                Preencha o formulário abaixo e entrarei em contato o mais breve
+                possível.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <form ref={form} onSubmit={handleSubmit} className="space-y-4">
+                <input
+                  type="hidden"
+                  name="to_email"
+                  value="leandroleite.ll25@gmail.com"
+                />
                 <motion.div
                   className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                   initial={{ opacity: 0 }}
@@ -83,11 +113,22 @@ export default function ContatoPage() {
                 >
                   <div className="space-y-2">
                     <Label htmlFor="nome">Nome</Label>
-                    <Input id="nome" name="nome" placeholder="Seu nome completo" required />
+                    <Input
+                      id="from_name"
+                      name="from_name"
+                      placeholder="Seu nome completo"
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" name="email" type="email" placeholder="seu.email@exemplo.com" required />
+                    <Input
+                      id="from_email"
+                      name="from_email"
+                      type="from_email"
+                      placeholder="seu.email@exemplo.com"
+                      required
+                    />
                   </div>
                 </motion.div>
 
@@ -98,7 +139,12 @@ export default function ContatoPage() {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <Label htmlFor="assunto">Assunto</Label>
-                  <Input id="assunto" name="assunto" placeholder="Assunto da mensagem" required />
+                  <Input
+                    id="subject"
+                    name="subject"
+                    placeholder="Assunto da mensagem"
+                    required
+                  />
                 </motion.div>
 
                 <motion.div
@@ -108,7 +154,13 @@ export default function ContatoPage() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <Label htmlFor="mensagem">Mensagem</Label>
-                  <Textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." rows={5} required />
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="Escreva sua mensagem aqui..."
+                    rows={5}
+                    required
+                  />
                 </motion.div>
 
                 <motion.div
@@ -116,8 +168,12 @@ export default function ContatoPage() {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  <Button type="submit" className="w-full">Enviar Mensagem</Button>
-                  {status && <p className="text-center mt-2 text-sm">{status}</p>}
+                  <Button type="submit" className="w-full">
+                    Enviar Mensagem
+                  </Button>
+                  {status && (
+                    <p className="text-center mt-2 text-sm">{status}</p>
+                  )}
                 </motion.div>
               </form>
             </CardContent>
@@ -133,15 +189,25 @@ export default function ContatoPage() {
           <Card>
             <CardHeader>
               <CardTitle>Informações de Contato</CardTitle>
-              <CardDescription>Outras formas de entrar em contato comigo.</CardDescription>
+              <CardDescription>
+                Outras formas de entrar em contato comigo.
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               {[
-                { icon: Mail, label: "Email", value: "leandroleite.ll25@gmail.com" },
-                { icon: Phone, label: "Telefone", value: "(35) 99205-8832" },
-                { icon: MapPin, label: "Localização", value: "Santa Rita do Sapucaí, MG - Brasil" },
+                {
+                  icon: Mail,
+                  label: "Email",
+                  value: "leandroleite.ll25@gmail.com",
+                },
+
+                {
+                  icon: MapPin,
+                  label: "Localização",
+                  value: "Santa Rita do Sapucaí, MG - Brasil",
+                },
               ].map((info, index) => {
-                const Icon = info.icon
+                const Icon = info.icon;
                 return (
                   <motion.div
                     key={info.label}
@@ -154,10 +220,12 @@ export default function ContatoPage() {
                     <Icon className="h-5 w-5 text-muted-foreground mt-0.5" />
                     <div>
                       <h3 className="font-medium">{info.label}</h3>
-                      <p className="text-sm text-muted-foreground">{info.value}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {info.value}
+                      </p>
                     </div>
                   </motion.div>
-                )
+                );
               })}
 
               <motion.div
@@ -170,7 +238,6 @@ export default function ContatoPage() {
                 <h3 className="font-medium mb-3">Redes Sociais</h3>
                 <div className="flex space-x-4">
                   {redes.map((rede) => (
-
                     <motion.a
                       key={rede.label}
                       href={rede.href}
@@ -179,10 +246,13 @@ export default function ContatoPage() {
                       whileHover={{ scale: 1.1 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                     <Button variant="outline" size="icon" className="h-10 w-10">
-  {rede.icon}
-</Button>
-
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-10 w-10"
+                      >
+                        {rede.icon}
+                      </Button>
                     </motion.a>
                   ))}
                 </div>
@@ -192,5 +262,5 @@ export default function ContatoPage() {
         </motion.div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,9 @@
-
-"use client"
-import Image from "next/image"
-import { motion } from "framer-motion"
+"use client";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function SobrePage() {
-  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
+  const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
   return (
     <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
@@ -26,7 +25,12 @@ export default function SobrePage() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <Image src={`${prefix}/SobreMim.webp`} alt="Leandro Leite" fill className="object-cover object-top" />
+              <Image
+                src={`${prefix}/Sobre.webp`}
+                alt="Leandro Leite"
+                fill
+                className="object-cover w-full h-full"
+              />
             </motion.div>
             <motion.div
               className="space-y-2"
@@ -35,8 +39,11 @@ export default function SobrePage() {
               transition={{ delay: 0.6 }}
             >
               <h2 className="text-xl font-semibold">Leandro Leite</h2>
+              <h2 className="text-muted-foreground">Desenvolvedor Back-End</h2>
               <p className="text-muted-foreground">Técnico em Eletrônica</p>
-              <p className="text-muted-foreground">Estudante de Sistemas de Informação</p>
+              <p className="text-muted-foreground">
+                Estudante de Sistemas de Informação
+              </p>
             </motion.div>
           </div>
         </div>
@@ -48,13 +55,100 @@ export default function SobrePage() {
               content: (
                 <>
                   <p className="text-muted-foreground mb-4">
-                    Sou técnico em eletrônica formado e atualmente curso Sistemas de Informação. Minha paixão pela tecnologia começou cedo, desmontando aparelhos para entender seu funcionamento. Após anos atuando na área técnica, decidi expandir meus horizontes para o desenvolvimento de software, onde hoje atuo como estagiário de back-end.
+                    Sou técnico em eletrônica formado e atualmente curso
+                    Sistemas de Informação. Minha paixão pela tecnologia começou
+                    cedo, desmontando aparelhos para entender seu funcionamento.
+                    Após anos atuando na área técnica, decidi expandir meus
+                    horizontes para o desenvolvimento de software, onde hoje
+                    atuo como estagiário de back-end.
                   </p>
                   <p className="text-muted-foreground">
-                    Ao longo da minha jornada, desenvolvi diversos projetos que combinam hardware e software, buscando sempre criar soluções inovadoras para problemas reais. Minha formação técnica me deu uma base sólida para entender os aspectos físicos da tecnologia, enquanto meus estudos em Sistemas de Informação me permitem criar aplicações eficientes e escaláveis.
+                    Ao longo da minha jornada, desenvolvi diversos projetos que
+                    combinam hardware e software, buscando sempre criar soluções
+                    inovadoras para problemas reais. Minha formação técnica me
+                    deu uma base sólida para entender os aspectos físicos da
+                    tecnologia, enquanto meus estudos em Sistemas de Informação
+                    me permitem criar aplicações eficientes e escaláveis.
                   </p>
                 </>
-              )
+              ),
+            },
+            {
+              title: "Formação",
+              content: (
+                <div className="space-y-4">
+                  <div className="border-l-4 border-primary pl-4">
+                    <h3 className="font-medium">
+                      Bacharelado em Sistemas de Informação{" "}
+                      <span className="text-sm text-muted-foreground">
+                        (2022–2025)
+                      </span>
+                    </h3>
+                    <p className="text-muted-foreground">
+                      FAI-MG — Em andamento
+                    </p>
+                  </div>
+                  <div className="border-l-4 border-primary pl-4">
+                    <h3 className="font-medium">
+                      Técnico em Eletrônica{" "}
+                      <span className="text-sm text-muted-foreground">
+                        (2015–2017)
+                      </span>
+                    </h3>
+                    <p className="text-muted-foreground">
+                      ETE FMC — Concluído juntamente com o Ensino Médio
+                    </p>
+                  </div>
+                </div>
+              ),
+            },
+            {
+              title: "Experiência Profissional",
+              content: (
+                <div className="space-y-4">
+                  {[
+                    {
+                      cargo: "Estagiário em Desenvolvimento Back-End",
+                      periodo: "Ago. 2025 – Presente",
+                      empresa: "Ativa Soluções",
+                    },
+                    {
+                      cargo: "Estagiário em Desenvolvimento de Software",
+                      periodo: "Fev. 2025 – Abr. 2025",
+                      empresa: "Lightera",
+                    },
+                    {
+                      cargo: "Técnico em Eletrônica",
+                      periodo: "Nov. 2021 – Abr. 2025",
+                      empresa: "Lightera",
+                    },
+                    {
+                      cargo: "Técnico em Eletrônica",
+                      periodo: "Mai. 2021 – Nov. 2021",
+                      empresa: "MBM",
+                    },
+                  ].map((exp, index) => (
+                    <motion.div
+                      key={index}
+                      className="border-l-4 border-primary pl-4"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                    >
+                      <h3 className="font-medium">
+                        {exp.cargo}{" "}
+                        <span className="text-sm text-muted-foreground">
+                          ({exp.periodo})
+                        </span>
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {exp.empresa} – Santa Rita do Sapucaí, MG
+                      </p>
+                    </motion.div>
+                  ))}
+                </div>
+              ),
             },
             {
               title: "Habilidades",
@@ -81,7 +175,7 @@ export default function SobrePage() {
                     </ul>
                   </div>
                 </div>
-              )
+              ),
             },
             {
               title: "Ferramentas",
@@ -90,9 +184,14 @@ export default function SobrePage() {
                   <div className="border rounded-lg p-4">
                     <h3 className="font-medium mb-2">Desenvolvimento</h3>
                     <ul className="list-disc list-inside text-muted-foreground space-y-1">
-                      <li>Linguagens: Python, Java, HTML, CSS, Javascript, Typescript</li>
-                      <li>Frameworks: ReactJS, Angular, NextJS, NestJS</li>
-                      <li>Banco de Dados: MongoDB, Postgres</li>
+                      <li>
+                        Linguagens: Python, Go, Java, HTML, CSS, Javascript,
+                        Typescript
+                      </li>
+                      <li>
+                        Frameworks: ReactJS, Angular, NextJS, NestJS, Flutter
+                      </li>
+                      <li>Banco de Dados: MongoDB, Postgres, Cassandra</li>
                       <li>Ferramentas de Estilo: Bootstrap, TailwindCSS</li>
                       <li>Controle de Versão: Git, GitHub</li>
                     </ul>
@@ -105,66 +204,8 @@ export default function SobrePage() {
                     </ul>
                   </div>
                 </div>
-              )
+              ),
             },
-            {
-              title: "Formação",
-              content: (
-                <div className="space-y-4">
-                  <div className="border-l-4 border-primary pl-4">
-                    <h3 className="font-medium">Bacharelado em Sistemas de Informação <span className="text-sm text-muted-foreground">(2022–2025)</span></h3>
-                    <p className="text-muted-foreground">FAI-MG — Em andamento</p>
-                  </div>
-                  <div className="border-l-4 border-primary pl-4">
-                    <h3 className="font-medium">Técnico em Eletrônica <span className="text-sm text-muted-foreground">(2015–2017)</span></h3>
-                    <p className="text-muted-foreground">ETE FMC — Concluído juntamente com o Ensino Médio</p>
-                  </div>
-                </div>
-              )
-            },
-            {
-              title: "Experiência Profissional",
-              content: (
-                <div className="space-y-4">
-                  {[
-                    {
-                      cargo: "Estagiário em Desenvolvimento Back-End",
-                      periodo: "Ago. 2025 – Presente",
-                      empresa: "Ativa Soluções"
-                    },
-                    {
-                      cargo: "Estagiário em Desenvolvimento de Software",
-                      periodo: "Fev. 2025 – Abr. 2025",
-                      empresa: "Lightera"
-                    },
-                    {
-                      cargo: "Técnico em Eletrônica",
-                      periodo: "Nov. 2021 – Abr. 2025",
-                      empresa: "Lightera"
-                    },
-                    {
-                      cargo: "Técnico em Eletrônica",
-                      periodo: "Mai. 2021 – Nov. 2021",
-                      empresa: "MBM"
-                    }
-                  ].map((exp, index) => (
-                    <motion.div
-                      key={index}
-                      className="border-l-4 border-primary pl-4"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                    >
-                      <h3 className="font-medium">
-                        {exp.cargo} <span className="text-sm text-muted-foreground">({exp.periodo})</span>
-                      </h3>
-                      <p className="text-muted-foreground">{exp.empresa} – Santa Rita do Sapucaí, MG</p>
-                    </motion.div>
-                  ))}
-                </div>
-              )
-            }
           ].map((section, index) => (
             <motion.section
               key={index}
@@ -180,5 +221,5 @@ export default function SobrePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

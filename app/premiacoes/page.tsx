@@ -1,68 +1,86 @@
-'use client'
+"use client";
 
-import Image from "next/image"
-import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
-import { Trophy, Calendar, Medal } from "lucide-react"
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Trophy, Calendar, Medal } from "lucide-react";
 
 export default function PremiacoesPage() {
-  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+  const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
   const premiacoes = [
     {
       id: 1,
       titulo: "1º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
+      projeto: "SAGE- Sistema de Alerta e Gerenciamento de Emergências ",
+      descricao:
+        "Premiado pelo desenvolvimento do SAGE, que é uma solução inovadora que auxilia o gerenciamento de emergências em ambientes de longa permanência...",
+      instituicao:
+        "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+      ano: "2025",
+      imagem: "/Faitec2025.webp",
+      icone: Trophy,
+    },
+
+    {
+      id: 2,
+      titulo: "1º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
       projeto: "Eventify",
       descricao:
         "Premiado pelo desenvolvimento do Eventify, que é uma solução inovadora que simplifica o planejamento e a gestão de eventos...",
-      instituicao: "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+      instituicao:
+        "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
       ano: "2024",
       imagem: "/Faitec2024.webp",
       icone: Trophy,
     },
     {
-      id: 2,
+      id: 3,
       titulo: "1º Lugar na 20ª edição da Maratona de programação da FAI",
       descricao:
         "Competição que desafia equipes a resolver problemas complexos de programação em tempo limitado...",
-      instituicao: "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+      instituicao:
+        "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
       ano: "2024",
       imagem: "/Maratona2024.webp",
       icone: Trophy,
     },
     {
-      id: 3,
+      id: 4,
       titulo: "2º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
       projeto: "EduClass",
       descricao:
         "Premiado pelo desenvolvimento do EduClass, uma solução para facilitar a gestão acadêmica...",
-      instituicao: "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+      instituicao:
+        "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
       ano: "2023",
       imagem: "/Faitec2023.webp",
       icone: Medal,
     },
     {
-      id: 4,
+      id: 5,
       titulo: "1º Lugar na 19ª edição da Maratona de programação da FAI",
       descricao:
         "Competição que desafia equipes a resolver problemas complexos de programação em tempo limitado...",
-      instituicao: "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+      instituicao:
+        "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
       ano: "2022",
       imagem: "/Maratona2023.webp",
       icone: Trophy,
     },
     {
-      id: 5,
+      id: 6,
       titulo: "1º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
       projeto: "Astro",
       descricao:
         "Premiado pelo desenvolvimento do Astro, um jogo educativo que transforma o aprendizado matemático em uma aventura divertida...",
-      instituicao: "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+      instituicao:
+        "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
       ano: "2022",
       imagem: "/maratona2022.webp",
       icone: Trophy,
     },
-  ]
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
@@ -74,19 +92,22 @@ export default function PremiacoesPage() {
       >
         <h1 className="text-3xl font-bold mb-4">Premiações e Destaques</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Reconhecimentos e prêmios recebidos por projetos desenvolvidos ao longo da minha jornada acadêmica.
+          Reconhecimentos e prêmios recebidos por projetos desenvolvidos ao
+          longo da minha jornada acadêmica.
         </p>
       </motion.div>
 
       <div className="space-y-12">
         {premiacoes.map((premiacao, index) => {
-          const IconComponent = premiacao.icone
-          const isEven = index % 2 === 0
+          const IconComponent = premiacao.icone;
+          const isEven = index % 2 === 0;
 
           return (
             <motion.div
               key={premiacao.id}
-              className={`flex flex-col ${isEven ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}
+              className={`flex flex-col ${
+                isEven ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-8 items-center`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -104,7 +125,9 @@ export default function PremiacoesPage() {
                     src={`${prefix}${premiacao.imagem}`}
                     alt={premiacao.titulo}
                     fill
-                    className={`object-cover transition-transform hover:scale-105 ${premiacao.id === 3 ? "object-top" : ""}`}
+                    className={`object-cover transition-transform hover:scale-105 ${
+                      premiacao.id === 3 ? "object-top" : ""
+                    }`}
                   />
                   <motion.div
                     className="absolute top-4 right-4"
@@ -140,14 +163,15 @@ export default function PremiacoesPage() {
 
                 <div className="pt-2">
                   <p className="text-sm text-muted-foreground">
-                    Concedido por: <span className="font-medium">{premiacao.instituicao}</span>
+                    Concedido por:{" "}
+                    <span className="font-medium">{premiacao.instituicao}</span>
                   </p>
                 </div>
               </motion.div>
             </motion.div>
-          )
+          );
         })}
       </div>
     </div>
-  )
+  );
 }
