@@ -1,4 +1,4 @@
-// File: C:\Users\Leandro\Desktop\cloneee\portfolio\app\contato\page.tsx
+// File: C:\Users\Leandro Leite\Desktop\portfolio\portfolio\app\contato\page.tsx
 import * as entry from '../../../../app/contato/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

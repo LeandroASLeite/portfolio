@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -10,11 +10,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { motion } from "framer-motion"
+} from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 export default function ProjetosPage() {
-  const prefix = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
+  const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
   const projetos = [
     {
@@ -41,7 +41,23 @@ export default function ProjetosPage() {
       imagem: "/Astro.webp",
       tecnologias: ["Python", "PyGame", "Pandas"],
     },
-  ]
+    {
+      id: 4,
+      titulo: "Schedulr",
+      descricao:
+        "Schedulr é uma aplicação inspirada no Google Agenda, desenvolvida originalmente para um processo seletivo. Permite criar, visualizar e gerenciar reuniões em um calendário interativo. O back-end foi feito com Express e MongoDB, e o front-end com React, demonstrando o início da minha jornada no desenvolvimento web.",
+      imagem: "/Schedulr.webp",
+      tecnologias: ["React", "Express", "MongoDB", "Node.js"],
+    },
+    {
+      id: 5,
+      titulo: "QueroLer",
+      descricao:
+        "QueroLer é um aplicativo mobile desenvolvido em Flutter que permite ao usuário salvar e gerenciar os livros que deseja ler. A autenticação foi feita usando a DummyAPI, e a busca de livros é integrada à OpenLibrary API. O app possibilita favoritar livros e mantê-los organizados em uma lista pessoal.",
+      imagem: "/QueroLer.webp",
+      tecnologias: ["Flutter", "Dart", "OpenLibrary API", "DummyAPI"],
+    },
+  ];
 
   return (
     <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
@@ -53,7 +69,8 @@ export default function ProjetosPage() {
       >
         <h1 className="text-3xl font-bold mb-4">Meus Projetos</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Conheça alguns dos projetos que desenvolvi combinando meus conhecimentos em eletrônica e programação.
+          Conheça alguns dos projetos que desenvolvi combinando meus
+          conhecimentos em eletrônica e programação.
         </p>
       </motion.div>
 
@@ -87,7 +104,10 @@ export default function ProjetosPage() {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {projeto.tecnologias.map((tech) => (
-                    <span key={tech} className="bg-muted text-xs px-2 py-1 rounded-md">
+                    <span
+                      key={tech}
+                      className="bg-muted text-xs px-2 py-1 rounded-md"
+                    >
                       {tech}
                     </span>
                   ))}
@@ -99,5 +119,5 @@ export default function ProjetosPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }
