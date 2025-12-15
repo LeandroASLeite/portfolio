@@ -83,7 +83,8 @@ export default function PremiacoesPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
+    // <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
+    <div className="container mx-auto px-4 py-12 pt-16 md:pt-16 overflow-x-hidden">
       <motion.div
         className="mb-12 text-center"
         initial={{ opacity: 0, y: -20 }}

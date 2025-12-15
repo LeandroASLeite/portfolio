@@ -19,6 +19,14 @@ export default function ProjetosPage() {
   const projetos = [
     {
       id: 1,
+      titulo: "SAGE- Sistema de Alerta e Gerenciamento de Emergências",
+      descricao:
+        "O Sistema de Alerta e Gerenciamento de Emergências (SAGE) é uma plataforma tecnológica essencial, composta por subsistemas de software e hardware, desenvolvida para otimizar a assistência e a segurança em instituições de longa permanência. O projeto permite a solicitação imediata de atendimento médico ou de enfermagem através do acionamento de alarmes, oferecendo um gerenciamento de emergências em tempo real que contribui diretamente para a segurança do residente, a organização da rotina da equipe multidisciplinar e a melhoria contínua da qualidade do cuidado.",
+      imagem: "/SAGE.webp",
+      tecnologias: ["AngularJS", "Java Springboot", "Postgress", "Docker"],
+    },
+    {
+      id: 2,
       titulo: "Book Auctions",
       descricao:
         "Este projeto é uma plataforma inovadora para leilão de livros, projetada para conectar leitores e colecionadores em um ambiente interativo e eficiente. A aplicação permite que usuários criem leilões personalizados, acompanhem lances em tempo real e gerenciem transações de maneira prática e segura.",
@@ -26,7 +34,7 @@ export default function ProjetosPage() {
       tecnologias: ["NextJS", "NestJS", "Postgress", "Docker"],
     },
     {
-      id: 2,
+      id: 3,
       titulo: "Eventify",
       descricao:
         "Eventify é uma plataforma de gestão de eventos colaborativos desenvolvida para facilitar a organização e a divisão de despesas em grupo. Seu objetivo principal é promover maior transparência nos custos e simplificar a coordenação entre os participantes...",
@@ -34,7 +42,7 @@ export default function ProjetosPage() {
       tecnologias: ["Angular", "CSS", "Java Springboot", "GCP"],
     },
     {
-      id: 3,
+      id: 4,
       titulo: "ASTRO",
       descricao:
         "Astro é um jogo de aprendizado matemático. Os usuários praticam e competem entre si e através de um sistema de ranking...",
@@ -42,7 +50,7 @@ export default function ProjetosPage() {
       tecnologias: ["Python", "PyGame", "Pandas"],
     },
     {
-      id: 4,
+      id: 5,
       titulo: "Schedulr",
       descricao:
         "Schedulr é uma aplicação inspirada no Google Agenda, desenvolvida originalmente para um processo seletivo. Permite criar, visualizar e gerenciar reuniões em um calendário interativo. O back-end foi feito com Express e MongoDB, e o front-end com React, demonstrando o início da minha jornada no desenvolvimento web.",
@@ -50,7 +58,7 @@ export default function ProjetosPage() {
       tecnologias: ["React", "Express", "MongoDB", "Node.js"],
     },
     {
-      id: 5,
+      id: 6,
       titulo: "QueroLer",
       descricao:
         "QueroLer é um aplicativo mobile desenvolvido em Flutter que permite ao usuário salvar e gerenciar os livros que deseja ler. A autenticação foi feita usando a DummyAPI, e a busca de livros é integrada à OpenLibrary API. O app possibilita favoritar livros e mantê-los organizados em uma lista pessoal.",

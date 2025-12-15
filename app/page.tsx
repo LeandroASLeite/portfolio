@@ -66,7 +66,7 @@ export default function Home() {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-primary">
             <Image
-              src={`${prefix}/Minha-foto.webp`}
+              src={`${prefix}/Sobre.webp`}
               alt="Leandro Leite"
               fill
               className="object-cover"

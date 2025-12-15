@@ -16,20 +16,20 @@ export default function SobrePage() {
         Sobre Mim
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
         <div className="md:col-span-1">
           <div className="sticky top-20">
             <motion.div
-              className="relative w-full aspect-square overflow-hidden rounded-lg mb-4"
+              className="relative w-40 sm:w-48 md:w-56 aspect-square overflow-hidden rounded-lg mb-4 mx-auto"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
               <Image
-                src={`${prefix}/Sobre.webp`}
+                src={`${prefix}/SobreMim.webp`}
                 alt="Leandro Leite"
                 fill
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full "
               />
             </motion.div>
             <motion.div
@@ -39,36 +39,38 @@ export default function SobrePage() {
               transition={{ delay: 0.6 }}
             >
               <h2 className="text-xl font-semibold">Leandro Leite</h2>
-              <h2 className="text-muted-foreground">Desenvolvedor Back-End</h2>
-              <p className="text-muted-foreground">Técnico em Eletrônica</p>
+              <h2 className="text-muted-foreground">
+                Desenvolvedor Back-end & Front-end
+              </h2>
               <p className="text-muted-foreground">
-                Estudante de Sistemas de Informação
+                Bacharel em Sistemas de Informação
               </p>
+              <p className="text-muted-foreground">Técnico em Eletrônica</p>
             </motion.div>
           </div>
         </div>
 
-        <div className="md:col-span-2 space-y-6">
+        <div className="md:col-span-4 space-y-6">
           {[
             {
               title: "Minha Trajetória",
               content: (
                 <>
                   <p className="text-muted-foreground mb-4">
-                    Sou técnico em eletrônica formado e atualmente curso
-                    Sistemas de Informação. Minha paixão pela tecnologia começou
-                    cedo, desmontando aparelhos para entender seu funcionamento.
-                    Após anos atuando na área técnica, decidi expandir meus
-                    horizontes para o desenvolvimento de software, onde hoje
-                    atuo como estagiário de back-end.
+                    Atuo como desenvolvedor de software, com foco em back-end e
+                    front-end, criando aplicações bem estruturadas, funcionais e
+                    voltadas para resolver problemas reais. Programar é algo que
+                    realmente me motiva, e busco constantemente evoluir tanto
+                    tecnicamente quanto na forma de pensar soluções.
                   </p>
+
                   <p className="text-muted-foreground">
-                    Ao longo da minha jornada, desenvolvi diversos projetos que
-                    combinam hardware e software, buscando sempre criar soluções
-                    inovadoras para problemas reais. Minha formação técnica me
-                    deu uma base sólida para entender os aspectos físicos da
-                    tecnologia, enquanto meus estudos em Sistemas de Informação
-                    me permitem criar aplicações eficientes e escaláveis.
+                    Minha formação como técnico em eletrônica contribuiu para
+                    uma base sólida em lógica, análise e resolução de problemas,
+                    influenciando diretamente minha forma de desenvolver
+                    software. Concluí recentemente a graduação em Sistemas de
+                    Informação, consolidando minha atuação profissional na área
+                    de desenvolvimento.
                   </p>
                 </>
               ),

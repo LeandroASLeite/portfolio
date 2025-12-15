@@ -97,7 +97,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Leandro Leite\\Desktop\\portfolio\\portfolio",
+    "outputFileTracingRoot": "C:\\Users\\Leandro Leite\\Desktop\\port\\portfolio",
     "experimental": {
       "allowedDevOrigins": [],
       "nodeMiddleware": false,
@@ -176,7 +176,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "C:\\Users\\Leandro Leite\\Desktop\\portfolio\\portfolio"
+        "root": "C:\\Users\\Leandro Leite\\Desktop\\port\\portfolio"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -282,7 +282,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts"
   },
-  "appDir": "C:\\Users\\Leandro Leite\\Desktop\\portfolio\\portfolio",
+  "appDir": "C:\\Users\\Leandro Leite\\Desktop\\port\\portfolio",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
