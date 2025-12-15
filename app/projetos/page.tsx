@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import {
   Card,
   CardContent,
@@ -11,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { motion } from "framer-motion";
 
 export default function ProjetosPage() {
   const prefix = process.env.NODE_ENV === "production" ? "/portfolio" : "";
@@ -19,33 +17,33 @@ export default function ProjetosPage() {
   const projetos = [
     {
       id: 1,
-      titulo: "SAGE- Sistema de Alerta e Gerenciamento de Emergências",
+      titulo: "SAGE – Sistema de Alerta e Gerenciamento de Emergências",
       descricao:
-        "O Sistema de Alerta e Gerenciamento de Emergências (SAGE) é uma plataforma tecnológica essencial, composta por subsistemas de software e hardware, desenvolvida para otimizar a assistência e a segurança em instituições de longa permanência. O projeto permite a solicitação imediata de atendimento médico ou de enfermagem através do acionamento de alarmes, oferecendo um gerenciamento de emergências em tempo real que contribui diretamente para a segurança do residente, a organização da rotina da equipe multidisciplinar e a melhoria contínua da qualidade do cuidado.",
+        "O Sistema de Alerta e Gerenciamento de Emergências (SAGE) é uma plataforma composta por software e hardware, desenvolvida para otimizar a assistência e a segurança em instituições de longa permanência, permitindo o acionamento de alarmes e o gerenciamento de emergências em tempo real.",
       imagem: "/SAGE.webp",
-      tecnologias: ["AngularJS", "Java Springboot", "Postgress", "Docker"],
+      tecnologias: ["AngularJS", "Java Spring Boot", "PostgreSQL", "Docker"],
     },
     {
       id: 2,
       titulo: "Book Auctions",
       descricao:
-        "Este projeto é uma plataforma inovadora para leilão de livros, projetada para conectar leitores e colecionadores em um ambiente interativo e eficiente. A aplicação permite que usuários criem leilões personalizados, acompanhem lances em tempo real e gerenciem transações de maneira prática e segura.",
+        "Plataforma web para leilão de livros que conecta leitores e colecionadores, permitindo a criação de leilões, acompanhamento de lances em tempo real e gerenciamento seguro das transações.",
       imagem: "/BookAuctions.webp",
-      tecnologias: ["NextJS", "NestJS", "Postgress", "Docker"],
+      tecnologias: ["Next.js", "NestJS", "PostgreSQL", "Docker"],
     },
     {
       id: 3,
       titulo: "Eventify",
       descricao:
-        "Eventify é uma plataforma de gestão de eventos colaborativos desenvolvida para facilitar a organização e a divisão de despesas em grupo. Seu objetivo principal é promover maior transparência nos custos e simplificar a coordenação entre os participantes...",
+        "Plataforma colaborativa para gestão de eventos e divisão de despesas em grupo, focada em transparência, organização e colaboração entre os participantes.",
       imagem: "/Eventify.webp",
-      tecnologias: ["Angular", "CSS", "Java Springboot", "GCP"],
+      tecnologias: ["Angular", "Java Spring Boot", "GCP"],
     },
     {
       id: 4,
       titulo: "ASTRO",
       descricao:
-        "Astro é um jogo de aprendizado matemático. Os usuários praticam e competem entre si e através de um sistema de ranking...",
+        "Jogo educacional focado no aprendizado de matemática, onde usuários praticam, competem entre si e acompanham sua evolução por meio de um sistema de ranking.",
       imagem: "/Astro.webp",
       tecnologias: ["Python", "PyGame", "Pandas"],
     },
@@ -53,62 +51,68 @@ export default function ProjetosPage() {
       id: 5,
       titulo: "Schedulr",
       descricao:
-        "Schedulr é uma aplicação inspirada no Google Agenda, desenvolvida originalmente para um processo seletivo. Permite criar, visualizar e gerenciar reuniões em um calendário interativo. O back-end foi feito com Express e MongoDB, e o front-end com React, demonstrando o início da minha jornada no desenvolvimento web.",
+        "Aplicação web inspirada no Google Agenda, desenvolvida durante um processo seletivo, com criação e gerenciamento de reuniões em um calendário interativo.",
       imagem: "/Schedulr.webp",
-      tecnologias: ["React", "Express", "MongoDB", "Node.js"],
+      tecnologias: ["React", "Node.js", "Express", "MongoDB"],
     },
     {
       id: 6,
       titulo: "QueroLer",
       descricao:
-        "QueroLer é um aplicativo mobile desenvolvido em Flutter que permite ao usuário salvar e gerenciar os livros que deseja ler. A autenticação foi feita usando a DummyAPI, e a busca de livros é integrada à OpenLibrary API. O app possibilita favoritar livros e mantê-los organizados em uma lista pessoal.",
+        "Aplicativo mobile desenvolvido em Flutter para gerenciamento de livros desejados, com autenticação e integração com APIs externas para busca e organização.",
       imagem: "/QueroLer.webp",
-      tecnologias: ["Flutter", "Dart", "OpenLibrary API", "DummyAPI"],
+      tecnologias: ["Flutter", "Dart", "OpenLibrary API"],
     },
   ];
 
   return (
     <div className="container mx-auto px-4 py-12 pt-16 md:pt-16">
+      {/* Header */}
       <motion.div
-        className="mb-8 text-center"
+        className="mb-10 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         <h1 className="text-3xl font-bold mb-4">Meus Projetos</h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Conheça alguns dos projetos que desenvolvi combinando meus
-          conhecimentos em eletrônica e programação.
+          Alguns dos projetos que desenvolvi ao longo da minha trajetória como
+          desenvolvedor, aplicando boas práticas, arquitetura e tecnologias
+          modernas.
         </p>
       </motion.div>
 
+      {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projetos.map((projeto, index) => (
           <motion.div
             key={projeto.id}
+            className="h-full"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.15 }}
           >
-            <Card className="overflow-hidden">
-              <motion.div
-                className="relative h-48 w-full"
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
+            <Card className="h-full flex flex-col overflow-hidden">
+              {/* Image */}
+              <div className="relative h-48 w-full">
                 <Image
-                  src={`${prefix}${projeto.imagem || "/placeholder.svg"}`}
+                  src={`${prefix}${projeto.imagem}`}
                   alt={projeto.titulo}
                   fill
                   className="object-cover"
                 />
-              </motion.div>
-              <CardHeader>
+              </div>
+
+              {/* Header */}
+              <CardHeader className="flex-1">
                 <CardTitle>{projeto.titulo}</CardTitle>
-                <CardDescription>{projeto.descricao}</CardDescription>
+                <CardDescription className="mt-2">
+                  {projeto.descricao}
+                </CardDescription>
               </CardHeader>
+
+              {/* Techs */}
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {projeto.tecnologias.map((tech) => (
@@ -121,7 +125,9 @@ export default function ProjetosPage() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter />
+
+              {/* Footer */}
+              <CardFooter className="mt-auto" />
             </Card>
           </motion.div>
         ))}

@@ -23,8 +23,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Sou Leandro Leite — Desenvolvedor Back-End em Formação e Apaixonado
-            por Tecnologia.
+            Sou Leandro Leite — Desenvolvedor Back-End com experiência em
+            aplicações modernas.
           </motion.h1>
 
           <motion.p
@@ -33,11 +33,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Sou estudante de Sistemas de Informação e atualmente atuo como
-            estagiário de back-end. Apaixonado por tecnologia, venho
-            desenvolvendo projetos que já foram reconhecidos em premiações.
-            Estou sempre em busca de novos aprendizados e de criar soluções que
-            realmente façam a diferença.
+            Sou formado em Sistemas de Informação e atuo como desenvolvedor, com
+            experiência em back-end e front-end. Venho desenvolvendo soluções
+            web modernas, focadas em performance, organização e boas práticas.
+            Gosto de programar, aprender constantemente e transformar problemas
+            reais em software bem construído.
           </motion.p>
 
           <motion.div
