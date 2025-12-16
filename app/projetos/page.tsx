@@ -17,6 +17,22 @@ export default function ProjetosPage() {
   const projetos = [
     {
       id: 1,
+      titulo: "Workout Plan – Plataforma de Planejamento de Treinos",
+      descricao:
+        "O Workout Plan é uma aplicação web desenvolvida para auxiliar usuários na criação, organização e acompanhamento de treinos personalizados. A plataforma permite a seleção de exercícios por grupo muscular, parte do corpo ou equipamento, utilizando dados de uma API externa, além de oferecer uma interface moderna e responsiva para montagem de rotinas de treino de forma prática e intuitiva.",
+      imagem: "/workout-plan.webp",
+      tecnologias: [
+        "Next.js 16",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Firebase",
+        "Vercel",
+      ],
+    },
+
+    {
+      id: 2,
       titulo: "SAGE – Sistema de Alerta e Gerenciamento de Emergências",
       descricao:
         "O Sistema de Alerta e Gerenciamento de Emergências (SAGE) é uma plataforma composta por software e hardware, desenvolvida para otimizar a assistência e a segurança em instituições de longa permanência, permitindo o acionamento de alarmes e o gerenciamento de emergências em tempo real.",
@@ -24,7 +40,7 @@ export default function ProjetosPage() {
       tecnologias: ["AngularJS", "Java Spring Boot", "PostgreSQL", "Docker"],
     },
     {
-      id: 2,
+      id: 3,
       titulo: "Book Auctions",
       descricao:
         "Plataforma web para leilão de livros que conecta leitores e colecionadores, permitindo a criação de leilões, acompanhamento de lances em tempo real e gerenciamento seguro das transações.",
@@ -32,7 +48,7 @@ export default function ProjetosPage() {
       tecnologias: ["Next.js", "NestJS", "PostgreSQL", "Docker"],
     },
     {
-      id: 3,
+      id: 4,
       titulo: "Eventify",
       descricao:
         "Plataforma colaborativa para gestão de eventos e divisão de despesas em grupo, focada em transparência, organização e colaboração entre os participantes.",
@@ -40,7 +56,7 @@ export default function ProjetosPage() {
       tecnologias: ["Angular", "Java Spring Boot", "GCP"],
     },
     {
-      id: 4,
+      id: 5,
       titulo: "ASTRO",
       descricao:
         "Jogo educacional focado no aprendizado de matemática, onde usuários praticam, competem entre si e acompanham sua evolução por meio de um sistema de ranking.",
@@ -48,7 +64,7 @@ export default function ProjetosPage() {
       tecnologias: ["Python", "PyGame", "Pandas"],
     },
     {
-      id: 5,
+      id: 6,
       titulo: "Schedulr",
       descricao:
         "Aplicação web inspirada no Google Agenda, desenvolvida durante um processo seletivo, com criação e gerenciamento de reuniões em um calendário interativo.",
@@ -56,7 +72,7 @@ export default function ProjetosPage() {
       tecnologias: ["React", "Node.js", "Express", "MongoDB"],
     },
     {
-      id: 6,
+      id: 7,
       titulo: "QueroLer",
       descricao:
         "Aplicativo mobile desenvolvido em Flutter para gerenciamento de livros desejados, com autenticação e integração com APIs externas para busca e organização.",

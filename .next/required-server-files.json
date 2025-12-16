@@ -97,7 +97,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "C:\\Users\\Leandro Leite\\Desktop\\port\\portfolio",
+    "outputFileTracingRoot": "C:\\Users\\leandro.leite\\Desktop\\nest-api-test\\portfolio",
     "experimental": {
       "allowedDevOrigins": [],
       "nodeMiddleware": false,
@@ -155,7 +155,7 @@
       "middlewarePrefetch": "flexible",
       "optimisticClientCache": true,
       "manualClientBasePath": false,
-      "cpus": 7,
+      "cpus": 11,
       "memoryBasedWorkersCount": false,
       "imgOptConcurrency": null,
       "imgOptTimeoutInSeconds": 7,
@@ -176,7 +176,7 @@
       "forceSwcTransforms": false,
       "largePageDataBytes": 128000,
       "turbo": {
-        "root": "C:\\Users\\Leandro Leite\\Desktop\\port\\portfolio"
+        "root": "C:\\Users\\leandro.leite\\Desktop\\nest-api-test\\portfolio"
       },
       "typedRoutes": false,
       "typedEnv": false,
@@ -282,7 +282,7 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts"
   },
-  "appDir": "C:\\Users\\Leandro Leite\\Desktop\\port\\portfolio",
+  "appDir": "C:\\Users\\leandro.leite\\Desktop\\nest-api-test\\portfolio",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
