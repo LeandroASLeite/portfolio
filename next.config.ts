@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
   assetPrefix: isProd ? "/portfolio/" : "",
   output: "export",
   distDir: "dist",
+
+  experimental: {
+    turbo: {},
+  },
+
   images: {
     unoptimized: true,
   },
