@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Link } from "@/i18n/navigation";
@@ -61,12 +61,10 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-primary">
-            <Image
-              src="../Sobre.webp"
-              alt="Leandro Leite"
-              fill
-              className="object-cover"
-              priority
+            <img
+              src="/portfolio/Sobre.webp"
+              alt={t("imageAlt")}
+              className="absolute h-full w-full object-cover"
             />
           </div>
         </motion.div>

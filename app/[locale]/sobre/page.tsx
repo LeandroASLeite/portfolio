@@ -78,7 +78,7 @@ export default function SobrePage() {
               transition={{ duration: 0.6 }}
             >
               <Image
-                src="/SobreMim.webp"
+                src="/portfolio/SobreMim.webp"
                 alt="Leandro Leite"
                 fill
                 className="object-cover"
