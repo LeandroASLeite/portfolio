@@ -1,0 +1,177 @@
+{
+  "Navbar": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "awards": "Premiações",
+    "contact": "Contato",
+    "contactButton": "Entre em Contato"
+  },
+  "Home": {
+    "title": "Sou Leandro Leite — Desenvolvedor Back-End com experiência em aplicações modernas.",
+    "description": "Sou formado em Sistemas de Informação e atuo como desenvolvedor, com experiência em back-end e front-end. Venho desenvolvendo soluções web modernas, focadas em performance, organização e boas práticas. Gosto de programar, aprender constantemente e transformar problemas reais em software bem construído.",
+    "projectsButton": "Meus Projetos",
+    "awardsButton": "Projetos Premiados",
+    "contactButton": "Entre em Contato",
+    "imageAlt": "Leandro Leite"
+  },
+  "About": {
+    "title": "Sobre Mim",
+    "role": "Desenvolvedor Back-end & Front-end",
+    "degree": "Bacharel em Sistemas de Informação",
+    "technicalDegree": "Técnico em Eletrônica",
+
+    "journey": {
+      "title": "Minha Trajetória",
+      "paragraph1": "Atuo como desenvolvedor de software, com foco em back-end e front-end, criando aplicações bem estruturadas, funcionais e voltadas para resolver problemas reais. Programar é algo que realmente me motiva, e busco constantemente evoluir tanto tecnicamente quanto na forma de pensar soluções.",
+      "paragraph2": "Minha formação como técnico em eletrônica contribuiu para uma base sólida em lógica, análise e resolução de problemas. Concluí recentemente a graduação em Sistemas de Informação, consolidando minha atuação profissional na área de desenvolvimento."
+    },
+
+    "education": {
+      "title": "Formação",
+      "bachelor": "Bacharelado em Sistemas de Informação",
+      "bachelorPeriod": "2022–2025",
+      "bachelorInstitution": "FAI-MG — Concluído",
+      "technical": "Técnico em Eletrônica",
+      "technicalPeriod": "2015–2017",
+      "technicalInstitution": "ETE FMC — Ensino Médio Integrado"
+    },
+
+    "experience": {
+      "title": "Experiência Profissional",
+      "present": "Presente",
+      "location": "Santa Rita do Sapucaí, MG",
+      "jobs": {
+        "softwareJunior": "Desenvolvedor de Software Júnior",
+        "backendIntern": "Estagiário em Desenvolvimento Back-End",
+        "softwareIntern": "Estagiário em Desenvolvimento de Software",
+        "electronicsLightera": "Técnico em Eletrônica",
+        "electronicsMbm": "Técnico em Eletrônica"
+      }
+    },
+
+    "technologies": {
+      "title": "Tecnologias",
+      "languages": "Linguagens",
+      "frameworks": "Frameworks & Bibliotecas",
+      "databases": "Banco de Dados",
+      "style": "Estilo & UI",
+      "tools": "Ferramentas & Metodologias"
+    },
+
+    "personalSkills": {
+      "title": "Habilidades Pessoais",
+      "problemSolving": "Resolução de problemas",
+      "teamwork": "Trabalho em equipe",
+      "communication": "Comunicação",
+      "continuousLearning": "Aprendizado contínuo",
+      "creativity": "Criatividade"
+    }
+  },
+  "Projects": {
+    "title": "Meus Projetos",
+    "description": "Alguns dos projetos que desenvolvi ao longo da minha trajetória como desenvolvedor, aplicando boas práticas, arquitetura e tecnologias modernas.",
+    "items": {
+      "workoutPlan": {
+        "title": "Workout Plan – Plataforma de Planejamento de Treinos",
+        "description": "O Workout Plan é uma aplicação web desenvolvida para auxiliar usuários na criação, organização e acompanhamento de treinos personalizados. A plataforma permite a seleção de exercícios por grupo muscular, parte do corpo ou equipamento, utilizando dados de uma API externa, além de oferecer uma interface moderna e responsiva para montagem de rotinas de treino de forma prática e intuitiva."
+      },
+      "sage": {
+        "title": "SAGE – Sistema de Alerta e Gerenciamento de Emergências",
+        "description": "O Sistema de Alerta e Gerenciamento de Emergências (SAGE) é uma plataforma composta por software e hardware, desenvolvida para otimizar a assistência e a segurança em instituições de longa permanência, permitindo o acionamento de alarmes e o gerenciamento de emergências em tempo real."
+      },
+      "bookAuctions": {
+        "title": "Book Auctions",
+        "description": "Plataforma web para leilão de livros que conecta leitores e colecionadores, permitindo a criação de leilões, acompanhamento de lances em tempo real e gerenciamento seguro das transações."
+      },
+      "eventify": {
+        "title": "Eventify",
+        "description": "Plataforma colaborativa para gestão de eventos e divisão de despesas em grupo, focada em transparência, organização e colaboração entre os participantes."
+      },
+      "astro": {
+        "title": "ASTRO",
+        "description": "Jogo educacional focado no aprendizado de matemática, onde usuários praticam, competem entre si e acompanham sua evolução por meio de um sistema de ranking."
+      },
+      "schedulr": {
+        "title": "Schedulr",
+        "description": "Aplicação web inspirada no Google Agenda, desenvolvida durante um processo seletivo, com criação e gerenciamento de reuniões em um calendário interativo."
+      },
+      "queroLer": {
+        "title": "QueroLer",
+        "description": "Aplicativo mobile desenvolvido em Flutter para gerenciamento de livros desejados, com autenticação e integração com APIs externas para busca e organização."
+      }
+    }
+  },
+  "Awards": {
+    "title": "Premiações e Destaques",
+    "description": "Reconhecimentos e prêmios recebidos por projetos desenvolvidos ao longo da minha jornada acadêmica.",
+    "projectLabel": "Projeto",
+    "awardedBy": "Concedido por",
+    "institution": "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+    "items": {
+      "sage": {
+        "title": "1º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
+        "project": "SAGE - Sistema de Alerta e Gerenciamento de Emergências",
+        "description": "Premiado pelo desenvolvimento do SAGE, uma solução inovadora que auxilia o gerenciamento de emergências em ambientes de longa permanência."
+      },
+      "eventify": {
+        "title": "1º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
+        "project": "Eventify",
+        "description": "Premiado pelo desenvolvimento do Eventify, uma solução inovadora que simplifica o planejamento e a gestão de eventos."
+      },
+      "marathon20": {
+        "title": "1º Lugar na 20ª edição da Maratona de Programação da FAI",
+        "description": "Competição que desafia equipes a resolver problemas complexos de programação em tempo limitado."
+      },
+      "eduClass": {
+        "title": "2º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
+        "project": "EduClass",
+        "description": "Premiado pelo desenvolvimento do EduClass, uma solução para facilitar a gestão acadêmica."
+      },
+      "marathon19": {
+        "title": "1º Lugar na 19ª edição da Maratona de Programação da FAI",
+        "description": "Competição que desafia equipes a resolver problemas complexos de programação em tempo limitado."
+      },
+      "astro": {
+        "title": "1º Lugar na Feira de Tecnologia e Empreendedorismo da FAI",
+        "project": "Astro",
+        "description": "Premiado pelo desenvolvimento do Astro, um jogo educativo que transforma o aprendizado matemático em uma aventura divertida."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Entre em Contato",
+    "description": "Tem alguma pergunta ou proposta de projeto? Entre em contato comigo através do formulário abaixo.",
+    "form": {
+      "title": "Envie uma mensagem",
+      "description": "Preencha o formulário abaixo e entrarei em contato o mais breve possível.",
+      "name": "Nome",
+      "namePlaceholder": "Seu nome completo",
+      "email": "Email",
+      "emailPlaceholder": "seu.email@exemplo.com",
+      "subject": "Assunto",
+      "subjectPlaceholder": "Assunto da mensagem",
+      "message": "Mensagem",
+      "messagePlaceholder": "Escreva sua mensagem aqui...",
+      "submit": "Enviar Mensagem",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar a mensagem. Tente novamente."
+    },
+    "info": {
+      "title": "Informações de Contato",
+      "description": "Outras formas de entrar em contato comigo.",
+      "email": "Email",
+      "location": "Localização",
+      "social": "Redes Sociais"
+    }
+  },
+  "Footer": {
+    "rights": "Todos os direitos reservados."
+  },
+  "Theme": {
+    "label": "Tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  }
+}

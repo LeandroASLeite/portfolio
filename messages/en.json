@@ -1,0 +1,177 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "awards": "Awards",
+    "contact": "Contact",
+    "contactButton": "Contact Me"
+  },
+  "Home": {
+    "title": "I'm Leandro Leite — Back-End Developer with experience building modern applications.",
+    "description": "I have a degree in Information Systems and work as a developer, with experience in both back-end and front-end development. I build modern web solutions focused on performance, organization, and best practices. I enjoy programming, continuously learning, and turning real-world problems into well-built software.",
+    "projectsButton": "My Projects",
+    "awardsButton": "Award-Winning Projects",
+    "contactButton": "Contact Me",
+    "imageAlt": "Leandro Leite"
+  },
+  "About": {
+    "title": "About Me",
+    "role": "Back-end & Front-end Developer",
+    "degree": "Bachelor's Degree in Information Systems",
+    "technicalDegree": "Electronics Technician",
+
+    "journey": {
+      "title": "My Journey",
+      "paragraph1": "I work as a software developer, focusing on both back-end and front-end development, creating well-structured and functional applications designed to solve real-world problems. Programming is something that truly motivates me, and I constantly strive to improve both technically and in the way I approach solutions.",
+      "paragraph2": "My background as an electronics technician gave me a solid foundation in logic, analysis, and problem-solving. I recently completed my degree in Information Systems, consolidating my professional career in software development."
+    },
+
+    "education": {
+      "title": "Education",
+      "bachelor": "Bachelor's Degree in Information Systems",
+      "bachelorPeriod": "2022–2025",
+      "bachelorInstitution": "FAI-MG — Completed",
+      "technical": "Electronics Technician",
+      "technicalPeriod": "2015–2017",
+      "technicalInstitution": "ETE FMC — Integrated High School"
+    },
+
+    "experience": {
+      "title": "Professional Experience",
+      "present": "Present",
+      "location": "Santa Rita do Sapucaí, MG",
+      "jobs": {
+        "softwareJunior": "Junior Software Developer",
+        "backendIntern": "Back-end Development Intern",
+        "softwareIntern": "Software Development Intern",
+        "electronicsLightera": "Electronics Technician",
+        "electronicsMbm": "Electronics Technician"
+      }
+    },
+
+    "technologies": {
+      "title": "Technologies",
+      "languages": "Languages",
+      "frameworks": "Frameworks & Libraries",
+      "databases": "Databases",
+      "style": "Style & UI",
+      "tools": "Tools & Methodologies"
+    },
+
+    "personalSkills": {
+      "title": "Personal Skills",
+      "problemSolving": "Problem Solving",
+      "teamwork": "Teamwork",
+      "communication": "Communication",
+      "continuousLearning": "Continuous Learning",
+      "creativity": "Creativity"
+    }
+  },
+  "Projects": {
+    "title": "My Projects",
+    "description": "Some of the projects I have developed throughout my career, applying best practices, architecture, and modern technologies.",
+    "items": {
+      "workoutPlan": {
+        "title": "Workout Plan – Workout Planning Platform",
+        "description": "Workout Plan is a web application designed to help users create, organize, and track personalized workouts. The platform allows users to select exercises by muscle group, body part, or equipment using data from an external API, while providing a modern and responsive interface for creating workout routines in a practical and intuitive way."
+      },
+      "sage": {
+        "title": "SAGE – Emergency Alert and Management System",
+        "description": "The Emergency Alert and Management System (SAGE) is a software and hardware platform developed to improve assistance and safety in long-term care institutions, allowing alarms to be triggered and emergencies to be managed in real time."
+      },
+      "bookAuctions": {
+        "title": "Book Auctions",
+        "description": "A web platform for book auctions that connects readers and collectors, allowing users to create auctions, track bids in real time, and securely manage transactions."
+      },
+      "eventify": {
+        "title": "Eventify",
+        "description": "A collaborative platform for event management and group expense sharing, focused on transparency, organization, and collaboration among participants."
+      },
+      "astro": {
+        "title": "ASTRO",
+        "description": "An educational game focused on mathematics learning, where users practice, compete against each other, and track their progress through a ranking system."
+      },
+      "schedulr": {
+        "title": "Schedulr",
+        "description": "A web application inspired by Google Calendar, developed during a recruitment process, featuring meeting creation and management through an interactive calendar."
+      },
+      "queroLer": {
+        "title": "QueroLer",
+        "description": "A Flutter mobile application for managing books users want to read, featuring authentication and integration with external APIs for searching and organizing books."
+      }
+    }
+  },
+  "Awards": {
+    "title": "Awards & Highlights",
+    "description": "Recognition and awards received for projects developed throughout my academic journey.",
+    "projectLabel": "Project",
+    "awardedBy": "Awarded by",
+    "institution": "FAI - Centro de Ensino Superior em Gestão, Tecnologia e Educação",
+    "items": {
+      "sage": {
+        "title": "1st Place at FAI's Technology and Entrepreneurship Fair",
+        "project": "SAGE - Emergency Alert and Management System",
+        "description": "Awarded for the development of SAGE, an innovative solution designed to assist emergency management in long-term care environments."
+      },
+      "eventify": {
+        "title": "1st Place at FAI's Technology and Entrepreneurship Fair",
+        "project": "Eventify",
+        "description": "Awarded for the development of Eventify, an innovative solution that simplifies event planning and management."
+      },
+      "marathon20": {
+        "title": "1st Place at the 20th FAI Programming Marathon",
+        "description": "A competition that challenges teams to solve complex programming problems within a limited amount of time."
+      },
+      "eduClass": {
+        "title": "2nd Place at FAI's Technology and Entrepreneurship Fair",
+        "project": "EduClass",
+        "description": "Awarded for the development of EduClass, a solution designed to simplify academic management."
+      },
+      "marathon19": {
+        "title": "1st Place at the 19th FAI Programming Marathon",
+        "description": "A competition that challenges teams to solve complex programming problems within a limited amount of time."
+      },
+      "astro": {
+        "title": "1st Place at FAI's Technology and Entrepreneurship Fair",
+        "project": "Astro",
+        "description": "Awarded for the development of Astro, an educational game that transforms mathematics learning into a fun adventure."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "description": "Have a question or a project proposal? Get in touch with me using the form below.",
+    "form": {
+      "title": "Send a Message",
+      "description": "Fill out the form below and I will get back to you as soon as possible.",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Message subject",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "Error sending the message. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "Other ways to get in touch with me.",
+      "email": "Email",
+      "location": "Location",
+      "social": "Social Media"
+    }
+  },
+  "Footer": {
+    "rights": "All rights reserved."
+  },
+  "Theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
