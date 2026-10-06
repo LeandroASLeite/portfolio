@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   assetPrefix: isProd ? "/portfolio/" : "",
   output: "export",
   distDir: "dist",
+  trailingSlash: true,
 
   experimental: {
     turbo: {},
